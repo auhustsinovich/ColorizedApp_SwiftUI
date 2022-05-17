@@ -37,7 +37,15 @@ struct ContentView: View {
                 .focused($isInputActive)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
+                        
+                        Button(action: moveUp) {
+                            Image(systemName: "chevron.up")
+                        }
+                        Button(action: moveDown) {
+                            Image(systemName: "chevron.down")
+                        }
                         Spacer()
+                        
                         Button("Done") {
                             isInputActive = false
                         }
@@ -47,6 +55,14 @@ struct ContentView: View {
             }
             .padding()
         }
+    }
+    
+    private func moveUp() {
+        
+    }
+    
+    private func moveDown() {
+        
     }
 }
 
